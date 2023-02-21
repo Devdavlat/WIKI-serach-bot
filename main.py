@@ -14,7 +14,7 @@ bot = telebot.TeleBot(BOT_TOKEN, parse_mode='html')
 @bot.message_handler(commands=['start'])
 def welcome(message):
     print('welcome is working')
-    bot.send_message(message.from_user.id, '<b>Assalomu alykum.</b>')
+    bot.send_message(message.from_user.id, messages.WELCOME)
 
 
 @bot.message_handler(commands=['search'])
