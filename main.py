@@ -26,8 +26,11 @@ def search_handler(message):
 
 def sear_wiki(message):
     result_text = wiki_config.WikiSearch(message.text).get_result()
-    print(result_text)
-    bot.send_message(message.from_user.id, text=f"{result_text}")
+    if result_text is None:
+        bot.send_message(message.from_user.id, text=f"Bunday malumot topilmadi:\n{message.text}")
+
+    else:
+        bot.send_message(message.from_user.id, text=f"{result_text}")
 
 
 def my_commands():

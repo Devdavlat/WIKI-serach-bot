@@ -19,11 +19,15 @@ class WikiSearch:
             }
 
         )
-
+        print(self.input_text)
         if response.status_code == 200:
-            link = response.json()[3][0]
+            link = None
+            try:
+                link = response.json()[3][0]
+            except IndexError as e:
+                print(e)
+
             if link:
                 return link
-
-# wiki = "Amir Temur"
-# print(WikiSearch(wiki).get_result())
+            else:
+                return None
