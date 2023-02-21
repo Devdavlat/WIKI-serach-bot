@@ -1,6 +1,4 @@
 import requests
-from requests import request
-import json
 
 
 class WikiSearch:
@@ -27,3 +25,5 @@ class WikiSearch:
             if link:
                 return link
 
+# wiki = "Amir Temur"
+# print(WikiSearch(wiki).get_result())
