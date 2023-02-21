@@ -9,4 +9,4 @@
 - pip install environs
 ~~~
 
-## [Bot Configuration]()
+## [Bot Configuration](https://github.com/Devdavlat/WIKI-serach-bot/blob/main/main.py)
