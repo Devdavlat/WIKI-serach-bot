@@ -20,6 +20,7 @@ class WikiSearch:
 
         )
         print(self.input_text)
+        print(response.status_code)
         if response.status_code == 200:
             link = None
             try:
